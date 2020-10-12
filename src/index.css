@@ -1,13 +1,160 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  width: 100vw;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 767px) {
+  .card-thumbnail {
+    width: 49%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 0.9rem;
+  }
+  .card-thumbnail {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 1rem;
+  }
+  .card-thumbnail {
+    width: 20%;
+  }
+}
+
+.bg-blue {
+  background-color: #00ADEF !important;
+}
+
+.logoWhole {
+  width: 25vmin;
+}
+
+.navbar-light .navbar-toggler {
+  background: url("../src/static/logo/castle_door.svg") no-repeat center;
+  outline: none;
+}
+
+/* Animations Classes */
+
+.redToGreen {
+  transform: rotate(-90deg);
+  animation: redToGreen 1s;
+}
+
+.redToBlue {
+  transform: rotate(-180deg);
+  animation: redToBlue 1s;
+}
+
+.greenToRed {
+  transform: rotate(0deg);
+  animation: redToGreen 1s;
+}
+
+.greeToBlue {
+  transform: rotate(-180deg);
+  animation: greenToRed 1s;
+}
+
+.blueToGreen {
+  transform: rotate(-90deg);
+  animation: blueToGreen 1s;
+}
+
+.blueToRed {
+  transform: rotate(0deg);
+  animation: blueToRed 0.3s 2.5s;
+}
+
+/* Menu Wheel Animations */
+
+@keyframes redToGreen {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes redToBlue {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes greenToRed {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes greeToBlue {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes blueToGreen {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes blueToRed {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+.jumbotron {
+  background: url("../src/static/all_people.jpg") no-repeat center;
+  background-size: 100%;
+  height: 80vmin;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+}
+
+.dial {
+  background-image: url("../src/static/logo/dial.svg");
+}
+
+.filmsBtn {
+  width: 7vmin;
+}
+
+.fade {
+  -webkit-transition-duration: 0.5s;
+  /* Safari */
+  transition-duration: 0.5s;
 }
