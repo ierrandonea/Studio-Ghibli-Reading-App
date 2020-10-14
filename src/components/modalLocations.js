@@ -17,15 +17,14 @@ const LocationModal = id => {
                     <div className="modal-body">
                         <div className="container-fluid">
                             <div className="row">
-                                <div className="col-12 col-md-6 text-center">
-                                    <img src={`/static/people/${store.locationDetails.id}.jpg`} className="img-fluid" alt="..." />
+                                <div className="col-12 col-md-10 text-center">
+                                    <img src={`/static/locations/${store.locationDetails.id}.jpg`} className="img-fluid" alt="..." />
                                 </div>
-                                <div className="col-12 col-md-6 d-flex flex-column justify-content-between justify-content-md-around mt-4 mt-md-0">
+                                <div className="col-12 col-md-2 d-flex flex-column justify-content-between justify-content-md-around mt-4 mt-md-0 pl-auto pl-md-0">
                                     <h6>Name: {store.locationDetails.name}</h6>
-                                    <h6>Gender: {store.locationDetails.gender}</h6>
-                                    <h6>Age: {store.locationDetails.age}</h6>
-                                    <h6>Eye Colour: {store.locationDetails.eye_color}</h6>
-                                    <h6>Hair Colour: {store.locationDetails.hair_color}</h6>
+                                    <h6>Climate: {store.locationDetails.climate}</h6>
+                                    <h6>Terrain: {store.locationDetails.terrain}</h6>
+                                    <h6>Surface Water: {store.locationDetails.surface_water}</h6>
                                 </div>
                             </div>
                         </div>
