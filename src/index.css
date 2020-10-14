@@ -53,22 +53,12 @@ html {
   outline: none;
 }
 
-.all-people {
-  background: url("../src/static/all_people.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-}
-
 .navbar-toggler-icon {
   background: none !important;
 }
 
 .dial {
   background-image: url("../src/static/logo/dial.svg");
-}
-
-.filmsBtn {
-  width: 30%;
 }
 
 .fade {
@@ -88,5 +78,5 @@ html {
 }
 
 .overlay-override {
-  background-color: rgba(0, 0, 0, 0) !important;
+  background-color: rgba(255, 255, 255, 0) !important;
 }

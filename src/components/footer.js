@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class="text-secondary bg-dark px-2 py-3">
+        <footer class="text-secondary bg-dark px-2 py-3 mt-auto m">
             <div class="text-left text-sm">
                 <h6>
                     This is a fan project for practicing purposes only, it consumes the
