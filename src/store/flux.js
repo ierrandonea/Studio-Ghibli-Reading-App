@@ -6,7 +6,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             people: null,
             peopleDetails: null,
             locations: null,
-            locationDetails: null
+            locationDetails: null,
+            currentTab: " 1"
         },
         actions: {
             getFilms: () => {
@@ -23,19 +24,17 @@ const getState = ({ getStore, getActions, setStore }) => {
                         })
                     });
             },
-            getFilmDetails: id => {
-                fetch(`https://ghibliapi.herokuapp.com/films/${id}`, {
+            getFilmDetails: async id => {
+                const resp = await fetch(`https://ghibliapi.herokuapp.com/films/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
                     }
                 })
-                    .then(resp => resp.json())
-                    .then(data => {
-                        setStore({
-                            filmDetails: data
-                        })
-                    });
+                const data = await resp.json();
+                setStore({
+                    filmDetails: data
+                })
             },
             getPeople: () => {
                 fetch("https://ghibliapi.herokuapp.com/people", {
@@ -51,8 +50,20 @@ const getState = ({ getStore, getActions, setStore }) => {
                         })
                     });
             },
-            getPeopleDetails: id => {
-                fetch(`https://ghibliapi.herokuapp.com/people/${id}`, {
+            getPeopleDetails: async id => {
+                const resp = await fetch(`https://ghibliapi.herokuapp.com/people/${id}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const data = await resp.json();
+                setStore({
+                    peopleDetails: data
+                })
+            },
+            getLocations: () => {
+                fetch("https://ghibliapi.herokuapp.com/locations", {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -61,9 +72,26 @@ const getState = ({ getStore, getActions, setStore }) => {
                     .then(resp => resp.json())
                     .then(data => {
                         setStore({
-                            peopleDetails: data
+                            locations: data
                         })
                     });
+            },
+            getLocationDetails: async id => {
+                const resp = await fetch(`https://ghibliapi.herokuapp.com/locations/${id}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const data = await resp.json();
+                setStore({
+                    locationsDetails: data
+                })
+            },
+            setCurrentTab: (tab) => {
+                setStore({
+                    currentTab: tab
+                })
             }
         }
     }

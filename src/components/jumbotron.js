@@ -6,7 +6,7 @@ import locations from '../static/logo/locations.svg';
 
 const Jumbotron = () => {
     return (
-        <div class="jumbotron jumbotron-fluid px-3 overlay">
+        <div class="jumbotron all-people jumbotron-fluid px-3 overlay">
             <h1 class="display-4">The Studio Ghibli Reading Database</h1>
             <p class="lead">A simple page with info on the Ghibli universe</p>
             <hr class="my-4" />

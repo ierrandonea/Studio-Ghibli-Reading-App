@@ -18,6 +18,7 @@ const injectContext = PassedComponent => {
         useEffect(() => {
             state.actions.getFilms();
             state.actions.getPeople();
+            state.actions.getLocations();
         }, []);
 
         return (

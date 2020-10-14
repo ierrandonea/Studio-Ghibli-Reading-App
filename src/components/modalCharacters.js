@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import { Context } from '../store/appContext';
 
-const ModalChars = () => {
+const ModalChars = id => {
     const { store } = useContext(Context);
 
     return (
         !!store.peopleDetails &&
-        <div className="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="characterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
-                    <div className="modal-header">
+                    <div className="modal-header border-bottom-0 my-0">
                         <button type="button" className="close my-n4" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -17,25 +17,20 @@ const ModalChars = () => {
                     <div className="modal-body">
                         <div className="container-fluid">
                             <div className="row">
-                                <div className="col-12 col-md-6 col-lg-4 text-center">
+                                <div className="col-12 col-md-6 text-center">
                                     <img src={`/static/people/${store.peopleDetails.id}.jpg`} className="img-fluid" alt="..." />
                                 </div>
-                                <div className="col-12 col-md-6 col-lg-8 d-flex flex-column justify-content-around mt-4 mt-md-0">
-                                    <h6>Title: {store.peopleDetails.title}</h6>
-                                    <h6>Director: {store.peopleDetails.director}</h6>
-                                    <h6>Producer: {store.peopleDetails.producer}</h6>
-                                    <h6>Year: {store.peopleDetails.release_date}</h6>
-                                    <h6>Ratings: {store.peopleDetails.rt_score}</h6>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col mt-3">
-                                    <p>{store.peopleDetails.description}</p>
+                                <div className="col-12 col-md-6 d-flex flex-column justify-content-between justify-content-md-around mt-4 mt-md-0">
+                                    <h6>Name: {store.peopleDetails.name}</h6>
+                                    <h6>Gender: {store.peopleDetails.gender}</h6>
+                                    <h6>Age: {store.peopleDetails.age}</h6>
+                                    <h6>Eye Colour: {store.peopleDetails.eye_color}</h6>
+                                    <h6>Hair Colour: {store.peopleDetails.hair_color}</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="modal-footer">
+                    <div className="modal-footer border-top-0 my-0">
                         <button type="button" className="btn btn-sm btn-secondary my-n1" data-dismiss="modal">Close</button>
                     </div>
                 </div>
