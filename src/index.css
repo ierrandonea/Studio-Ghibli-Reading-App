@@ -47,6 +47,7 @@ html {
 
 .logoWhole {
   width: 25vmin;
+  max-height: 10vh;
 }
 
 .navbar-light .navbar-toggler {
@@ -79,4 +80,8 @@ html {
 
 .overlay-override {
   background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.menu-icon {
+  max-height: 10vh;
 }
